@@ -52,4 +52,14 @@ public class Register {
     public Register() {
         super();
     }
+
+    @Override
+    public String toString() {
+        return "Register{" +
+                "username='" + username + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
+    }
 }
