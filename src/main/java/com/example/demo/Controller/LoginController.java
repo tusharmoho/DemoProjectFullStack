@@ -25,4 +25,9 @@ public class LoginController {
     public List<Login> list() {
         return loginService.loginData();
     }
+
+    @GetMapping("/login-data")
+    public Login user(@RequestParam(name = "username") String name) {
+        return loginService.getData(name);
+    }
 }

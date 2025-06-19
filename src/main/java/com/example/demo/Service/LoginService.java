@@ -34,4 +34,15 @@ public class LoginService {
         }
         return logins;
     }
+
+
+    public Login getData(String userName){
+        Login login = new Login();
+        int j = 65;
+        login.setPassword(UUID.randomUUID().toString());
+        char j1 = (char) j;
+        login.setUsername(String.valueOf(j1));
+        j++;
+        return login;
+    }
 }
