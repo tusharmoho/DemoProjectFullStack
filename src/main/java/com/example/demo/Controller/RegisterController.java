@@ -18,9 +18,11 @@ public class RegisterController {
     @Autowired
     private RegisterService registerService;
 
-
     @PostMapping("/register-user")
     public ResponseClass doRegistration(@RequestBody Register register){
         return registerService.doRegistration(register);
     }
+
+
+
 }

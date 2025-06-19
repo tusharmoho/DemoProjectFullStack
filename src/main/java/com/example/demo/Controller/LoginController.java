@@ -6,6 +6,9 @@ import com.example.demo.Service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.print.Pageable;
+import java.util.List;
+
 @RestController
 @RequestMapping("/login-service")
 public class LoginController {
@@ -14,7 +17,12 @@ public class LoginController {
     private LoginService loginService;
 
     @PostMapping("/login-check")
-    public ResponseClass saveUser(@RequestBody Login login){
-        return  loginService.loginSave(login);
+    public ResponseClass saveUser(@RequestBody Login login) {
+        return loginService.loginSave(login);
+    }
+
+    @GetMapping("/login-list")
+    public List<Login> list() {
+        return loginService.loginData();
     }
 }
